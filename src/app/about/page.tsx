@@ -1,10 +1,36 @@
 const work = [
   {
+    company: "Prismforce",
+    companyUrl: "https://www.prismforce.ai/",
+    position: "Associate Software Development Engineer",
+    startDate: "July 2024",
+    endDate: "present",
+    keyPoints: [
+      "Developing backend application on NodeJS",
+      "Experience in working with SQL databases (POSTgreSQL), Sequelize ORM, and Redis."
+    ],
+    jobType: "FTE",
+  },
+  {
+    company: "Timechain Labs",
+    companyUrl: "https://timechainlabs.io/",
+    position: "Software Development Engineer",
+    startDate: "June 2024",
+    endDate: "June 2024",
+    keyPoints: [
+      "Joined as a SDE after successfully performing as an intern for 9 months.",
+      "Worked on Sveltekit based web applications, and assisted with development of TSOC Website."
+    ],
+    jobType: "FTE",
+  }
+];
+const intern = [
+  {
     company: "Timechain Labs",
     companyUrl: "https://timechainlabs.io/",
     position: "Svelte Developer Intern",
     startDate: "Jul 2023",
-    endDate: "Present",
+    endDate: "April 2024",
     keyPoints: [
       "Developing web products & implementing fast, modular & reactive code.",
       "Working with web metrics & lighthouse performance.",
@@ -81,11 +107,11 @@ const work = [
 ];
 const edu = [
   {
-    course: "ICSE (10th)",
-    school: "St. Mary's High School",
-    location: "Coochbehar, West Bengal",
-    endDate: "2018",
-    grade: "96.8%",
+    course: "B.Tech (Information Technology)",
+    school: "Jalpaiguri Govt. Engineering College",
+    location: "West Bengal",
+    endDate: "2024",
+    grade: "9.4 DGPA",
   },
   {
     course: "ISC (12th)",
@@ -95,11 +121,11 @@ const edu = [
     grade: "96.5%",
   },
   {
-    course: "B.Tech (Information Technology)",
-    school: "Jalpaiguri Govt. Engineering College",
-    location: "West Bengal",
-    endDate: "2024 (ongoing)",
-    grade: "9.155 CGPA (upto 6th sem)",
+    course: "ICSE (10th)",
+    school: "St. Mary's High School",
+    location: "Coochbehar, West Bengal",
+    endDate: "2018",
+    grade: "96.8%",
   },
 ];
 export default function Home() {
@@ -107,20 +133,19 @@ export default function Home() {
     <div className="flex flex-col items-start justify-evenly gap-y-2 w-full">
       <h1>Professional Experience</h1>
       <div className="flex flex-row flex-nowrap overflow-auto mb-4 w-[100%] relative">
-        {work.map((item, index) => (
+        {[...work,...intern].map((item, index) => (
           <div
             key={index}
-            className={`relative carousel-item mb-10 w-60 flex-col items-start justify-start rounded p-4 m-4 h-32 bg-neutral drop-shadow-md ${
-              item.jobType === "intern"
+            className={`relative carousel-item mb-10 w-60 flex-col items-start justify-start rounded p-4 m-4 h-32 bg-neutral drop-shadow-md ${item.jobType === "FTE"
                 ? "border border-primary"
                 : "border border-success"
-            }`}
+              }`}
           >
             <div className="absolute bottom-2 right-2 z-[1] peer h-6 w-6 text-center rounded-full bg-primary-content">i</div>
             <div className="peer-hover:hidden h-full w-full">
               <h1 className="">{item.position}</h1>
               <h2 className="text-sm text-accent">
-                <a href={item.companyUrl}>{item.company}</a>
+                <a href={item.companyUrl} target="_blank">{item.company}</a>
               </h2>
               <h3 className="text-xs">
                 {item.startDate} - {item.endDate}
