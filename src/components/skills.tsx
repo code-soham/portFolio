@@ -16,13 +16,14 @@ const skills = [
   },
   {
     category: "Backend",
-    skills: ["NodeJS", "Express", "MongoDB", "Sequelize", "POSTgreSQL", "Redis", "Firebase", "SocketIO"],
+    skills: ["NodeJS", "Express", "MongoDB", "NestJS", "Sequelize", "POSTgreSQL", "Redis", "Firebase", "SocketIO"],
   },
   {
     category: "Others",
     skills: [
       "Typescript",
       "Git",
+      "gRPC",
       "Python",
       "Heroku",
       "Netlify",
