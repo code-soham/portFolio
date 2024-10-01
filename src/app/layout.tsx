@@ -46,9 +46,9 @@ export default function RootLayout({
                   Soham Chowdhury
                 </div>
                 <div className="font-extralight text-xs md:text-base">
-                  Software Developer Intern @{" "}
-                  <a href="https://www.linkedin.com/company/timechainlabs/mycompany/">
-                    Timechain Labs
+                  Associate Software Development Engineer @{" "}
+                  <a href="https://prismforce.com/">
+                    Prismforce.ai
                   </a>
                 </div>
               </div>
